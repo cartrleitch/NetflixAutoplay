@@ -12,12 +12,11 @@ screen_center_x = screen_size[0]
 screen_center_y = screen_size[1]
 
 print(f"Screen size: {screen_size}")
-print(int(screen_center_x/2))
 print("Automatically skipping intro and selecting next episode on Netflix!")
 
 def move_center():
     p.moveTo(int(screen_center_x/2), int(screen_center_y/2), 0)
-move_center()
+
 while True:
     try:
         next_episode_button_location = p.locateCenterOnScreen(r'next_episode.png', confidence=0.5)
