@@ -26,6 +26,7 @@ while True:
         print("Locating next episode: " + str(next_episode_button_location))
         p.leftClick(next_episode_button_location)
         move_center()
+        next_episodes += 1
         print("Next epsiodes selected: " + str(next_episodes))
         
     except p.ImageNotFoundException:
@@ -37,6 +38,7 @@ while True:
         print("Locating skip intro: "+ str(skip_intro_button_location))
         p.leftClick(skip_intro_button_location)
         move_center()
+        skipped_intros += 1
         print("Intros skipped: " + str(skipped_intros))
 
     except p.ImageNotFoundException:
