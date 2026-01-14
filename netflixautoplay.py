@@ -11,6 +11,9 @@ screen_size = p.size()
 screen_center_x = screen_size[0]
 screen_center_y = screen_size[1]
 
+next_episodes = 0
+skipped_intros = 0
+
 print(f"Screen size: {screen_size}")
 print("Automatically skipping intro and selecting next episode on Netflix!")
 
@@ -23,7 +26,8 @@ while True:
         print("Locating next episode: " + str(next_episode_button_location))
         p.leftClick(next_episode_button_location)
         move_center()
-
+        print("Next epsiodes selected: " + next_episodes)
+        
     except p.ImageNotFoundException:
         #print("Next episode button not on screen.")
         pass
@@ -33,6 +37,7 @@ while True:
         print("Locating skip intro: "+ str(skip_intro_button_location))
         p.leftClick(skip_intro_button_location)
         move_center()
+        print("Intros skipped: " + skipped_intros)
 
     except p.ImageNotFoundException:
         #print("Skip intro button not on screen.")
