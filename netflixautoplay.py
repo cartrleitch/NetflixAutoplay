@@ -26,18 +26,18 @@ while True:
         print("Locating next episode: " + str(next_episode_button_location))
         p.leftClick(next_episode_button_location)
         move_center()
-        print("Next epsiodes selected: " + next_episodes)
+        print("Next epsiodes selected: " + str(next_episodes))
         
     except p.ImageNotFoundException:
         #print("Next episode button not on screen.")
         pass
 
     try:
-        skip_intro_button_location = p.locateCenterOnScreen(r'skip_intro.png', confidence=0.8)
+        skip_intro_button_location = p.locateCenterOnScreen(r'skip_intro.png', confidence=0.5)
         print("Locating skip intro: "+ str(skip_intro_button_location))
         p.leftClick(skip_intro_button_location)
         move_center()
-        print("Intros skipped: " + skipped_intros)
+        print("Intros skipped: " + str(skipped_intros))
 
     except p.ImageNotFoundException:
         #print("Skip intro button not on screen.")
